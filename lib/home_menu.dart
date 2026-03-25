@@ -4,6 +4,7 @@ import 'morning_azkar.dart';
 import 'evening_azkar.dart';
 import 'duas_page.dart';
 import 'charity_widget.dart';
+
 class HomeMenu extends StatelessWidget {
   const HomeMenu({super.key});
 
@@ -24,49 +25,50 @@ class HomeMenu extends StatelessWidget {
           onPressed: () => Navigator.pop(context),
         ),
       ),
-      body: Column(
-        children: [
-          Expanded(
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const SizedBox(height: 20),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const SizedBox(height: 20),
 
-                  menuItem(context, 'المسبحة الرقمية', Icons.fingerprint, () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const TasbeehCounter()),
-                    );
-                  }),
+                    menuItem(context, 'المسبحة الرقمية', Icons.fingerprint, () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const TasbeehCounter()),
+                      );
+                    }),
 
-                  menuItem(context, 'أذكار الصباح', Icons.wb_sunny_outlined, () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const MorningAzkar()),
-                    );
-                  }),
+                    menuItem(context, 'أذكار الصباح', Icons.wb_sunny_outlined, () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const MorningAzkar()),
+                      );
+                    }),
 
-                  menuItem(context, 'أذكار المساء', Icons.nights_stay_outlined, () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const EveningAzkar()),
-                    );
-                  }),
+                    menuItem(context, 'أذكار المساء', Icons.nights_stay_outlined, () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const EveningAzkar()),
+                      );
+                    }),
 
-                  menuItem(context, 'الأدعية المأثورة', Icons.auto_awesome, () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const DuasPage()),
-                    );
-                  }),
-                ],
+                    menuItem(context, 'الأدعية المأثورة', Icons.auto_awesome, () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const DuasPage()),
+                      );
+                    }),
+                  ],
+                ),
               ),
             ),
-          ),
-
-          const CharityText(),
-        ],
+            const CharityText(),
+          ],
+        ),
       ),
     );
   }

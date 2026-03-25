@@ -27,22 +27,23 @@ class EveningAzkar extends StatelessWidget {
         ),
       ),
 
-      body: Column(
-        children: [
-          Expanded(
-            child: ListView.builder(
-              itemCount: eveningAzkar.length,
-              itemBuilder: (context, index) {
-                return AzkarCard(
-                  text: eveningAzkar[index]['text'],
-                  maxCount: eveningAzkar[index]['count'],
-                );
-              },
+      body: SafeArea(
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView.builder(
+                itemCount: eveningAzkar.length,
+                itemBuilder: (context, index) {
+                  return AzkarCard(
+                    text: eveningAzkar[index]['text'],
+                    maxCount: eveningAzkar[index]['count'],
+                  );
+                },
+              ),
             ),
-          ),
-
-          const CharityText(),
-        ],
+            const CharityText(),
+          ],
+        ),
       ),
     );
   }

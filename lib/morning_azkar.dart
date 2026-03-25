@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'charity_widget.dart';
+
 class MorningAzkar extends StatelessWidget {
   const MorningAzkar({super.key});
 
@@ -29,23 +30,25 @@ class MorningAzkar extends StatelessWidget {
         ),
       ),
 
-      body: Column(
-        children: [
-          Expanded(
-            child: ListView.builder(
-              padding: const EdgeInsets.only(bottom: 20),
-              itemCount: azkarList.length,
-              itemBuilder: (context, index) {
-                return AzkarCard(
-                  text: azkarList[index]['text'],
-                  maxCount: azkarList[index]['count'],
-                );
-              },
+      body: SafeArea(
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView.builder(
+                padding: const EdgeInsets.only(bottom: 20),
+                itemCount: azkarList.length,
+                itemBuilder: (context, index) {
+                  return AzkarCard(
+                    text: azkarList[index]['text'],
+                    maxCount: azkarList[index]['count'],
+                  );
+                },
+              ),
             ),
-          ),
 
-          const CharityText(),
-        ],
+            const CharityText(),
+          ],
+        ),
       ),
     );
   }
