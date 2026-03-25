@@ -3,8 +3,7 @@ import 'tasbeeh_page.dart';
 import 'morning_azkar.dart';
 import 'evening_azkar.dart';
 import 'duas_page.dart';
-import 'charity_widget.dart'; // تأكدي من وجود هذا السطر ✅
-
+import 'charity_widget.dart';
 class HomeMenu extends StatelessWidget {
   const HomeMenu({super.key});
 
@@ -25,7 +24,7 @@ class HomeMenu extends StatelessWidget {
           onPressed: () => Navigator.pop(context),
         ),
       ),
-      body: Column( // استخدمنا Column هنا لترتيب القائمة مع نص الصدقة بالأسفل
+      body: Column(
         children: [
           Expanded(
             child: SingleChildScrollView(
@@ -65,7 +64,7 @@ class HomeMenu extends StatelessWidget {
               ),
             ),
           ),
-          // نص الصدقة الجارية يظهر دائماً في أسفل القائمة الرئيسية ✅
+
           const CharityText(),
         ],
       ),

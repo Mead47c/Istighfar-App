@@ -165,7 +165,7 @@ class _TasbeehCounterState extends State<TasbeehCounter> {
 
               const Spacer(flex: 3),
 
-              // هنا أضفنا توقيع الوفاء لجدك حمدان الله يرحمه ✅
+
               const CharityText(),
             ],
           ),
@@ -173,4 +173,4 @@ class _TasbeehCounterState extends State<TasbeehCounter> {
       ),
     );
   }
-} // نهاية الكلاس - تأكدي أن القوس هنا يغلق كل شيء
+}
