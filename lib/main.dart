@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'tasbeeh_page.dart';
+import 'home_menu.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -7,6 +8,7 @@ void main() {
     home: WelcomePage(),
   ));
 }
+
 
 BoxDecoration goldenDecoration() {
   return const BoxDecoration(
@@ -50,8 +52,12 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ],
               ),
+
               GestureDetector(
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const TasbeehCounter())),
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomeMenu())
+                ),
                 child: Container(
                   margin: const EdgeInsets.symmetric(horizontal: 40),
                   height: 60,
