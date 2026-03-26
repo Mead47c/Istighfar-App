@@ -8,7 +8,7 @@ class CharityText extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.only(bottom: 20.0, top: 10, left: 20, right: 20),
       child: Text(
-        "صدقة جارية عن حمدان الرويلي رحمه الله\nاذكرو جدي بدعوة لعلها تنير قبره",
+        "صدقة جارية عن أجدادي رحمهم الله\nاذكروهم بدعوة لعلها تنير قبورهم",
         textAlign: TextAlign.center,
         style: TextStyle(
           color: Colors.white38,
