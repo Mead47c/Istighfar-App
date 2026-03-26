@@ -3,12 +3,14 @@ import 'tasbeeh_page.dart';
 import 'home_menu.dart';
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: WelcomePage(),
+    theme: ThemeData(
+      fontFamily: 'AmiriQuran',
+    ),
+    home: const WelcomePage(),
   ));
 }
-
 
 BoxDecoration goldenDecoration() {
   return const BoxDecoration(
@@ -38,7 +40,7 @@ class WelcomePage extends StatelessWidget {
                 children: [
                   const SizedBox(height: 50),
                   const Text(
-                    "أستغفر ",
+                    "أستغفر",
                     style: TextStyle(fontSize: 70, fontWeight: FontWeight.bold, color: Color(0xFFD4AF37)),
                   ),
                   const SizedBox(height: 20),
@@ -52,7 +54,6 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ],
               ),
-
               GestureDetector(
                 onTap: () => Navigator.push(
                     context,
